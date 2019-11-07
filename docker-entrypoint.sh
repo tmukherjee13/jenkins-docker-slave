@@ -22,7 +22,7 @@ fi
 if [ ! -z "$JENKINS_NAME" ]; then
   NUM=`docker ps | grep $JENKINS_NAME | wc -l`
   IDX=$(($NUM + 1))
-  PARAMS="$PARAMS -name $JENKINS_NAME-$IDX"
+  PARAMS="$PARAMS -name $JENKINS_NAME"
 fi
 
 # Description to be put on the slave
